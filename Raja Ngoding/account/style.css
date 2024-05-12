@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+section.bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../Resource/acc_background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frame {
+  width: 80%;
+  height: 650px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.logo {
+  display: flex;
+  font-size: 8px;
+}
+.title {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255, 1);
+  text-shadow: 0 0 20px #ffffff;
+  margin-bottom: 20px;
+}
+.kiri .content {
+  width: 85%;
+  height: 550px;
+}
+.teksKiri {
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ungu {
+  -webkit-text-stroke: 0.5px rgb(150, 70, 255);
+  text-shadow: 0 0 20px rgb(150, 70, 255);
+}
+
+/* STAR */
+span.star {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(255, 255, 255, 0.1),
+    0 0 0 8px rgb(255, 255, 255, 0.1), 0 0 20px rgb(255, 255, 255, 1);
+  animation: animateStar 3s infinite;
+}
+span.star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, white, transparent);
+}
+@keyframes animateStar {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1100px);
+    opacity: 0;
+  }
+}
+span.star:nth-child(1) {
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1.5s;
+}
+span.star:nth-child(2) {
+  right: 200px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+span.star:nth-child(3) {
+  right: 650px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2.25s;
+}
+span.star:nth-child(4) {
+  right: 40px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 3s;
+}
+span.star:nth-child(5) {
+  right: 1200px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.25s;
+}
+span.star:nth-child(6) {
+  right: 800px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+}
+span.star:nth-child(7) {
+  right: 400px;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 1.5s;
+}
+span.star:nth-child(8) {
+  right: 1000px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 3s;
+}
+span.star:nth-child(9) {
+  right: -300px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.5s;
+}
+
+/* LOGIN */
+.login .isi {
+  display: flex;
+}
+.login .isi .kiri {
+  flex: 1.8;
+  width: 100%;
+  height: 650px;
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .isi .kanan {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginFrame {
+  position: relative;
+  width: 85%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  align-items: center;
+  margin: 35px 0;
+}
+#loginForm input {
+  height: 40px;
+  width: 75%;
+  border-radius: 10px;
+}
+#loginForm input:not([type="submit"]) {
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 0 10px;
+  display: block;
+}
+#loginForm input:not([type="submit"]):focus {
+  outline: none;
+  color: white;
+  border: 1px solid rgb(150, 70, 255);
+  box-shadow: 0 0 5px rgb(150, 70, 255);
+}
+.nav {
+  display: flex;
+  justify-content: center;
+}
+.nav p {
+  margin-right: 2px;
+  color: white;
+}
+.nav a {
+  margin-left: 2px;
+  color: rgb(150, 70, 255);
+  -webkit-text-stroke: 0.5px rgb(150, 70, 255);
+  text-shadow: 0 0 20px rgb(150, 70, 255);
+  font-weight: 900;
+  text-decoration: none;
+}
+.nav a:hover {
+  color: rgb(70, 159, 255);
+  -webkit-text-stroke: 0.5px rgb(70, 159, 255);
+  text-shadow: 0 0 20px rgb(70, 159, 255);
+}
+.errorMsg {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  color: red;
+  -webkit-text-stroke: 0.5px rgb(255, 0, 0);
+  text-shadow: 0 0 50px rgb(255, 0, 0);
+  margin: 40px 25px;
+}
+.successMsg {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  color: rgb(0, 255, 0);
+  -webkit-text-stroke: 0.5px rgb(0, 255, 0);
+  text-shadow: 0 0 50px rgb(0, 255, 0);
+  margin: 40px 25px;
+}
+.buffer {
+  top: 86%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid rgb(150, 70, 255);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.4s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+input[name="btn"] {
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+}
+input[name="btn"]:hover {
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.illustrasi1 {
+  width: 350px;
+  height: auto;
+}
+.illustrasi2 {
+  width: 450px;
+  height: auto;
+  margin-top: 40px;
+}
+.welcome {
+  margin: 30px 0;
+}
+
+/* REGISTER */
+.register .isi {
+  display: flex;
+}
+.register .isi .kiri {
+  flex: 1.8;
+  width: 100%;
+  height: 650px;
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register .isi .kanan {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registerFrame {
+  position: relative;
+  width: 85%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  align-items: center;
+  margin: 35px 0;
+}
+#registerForm input {
+  height: 40px;
+  width: 75%;
+  border-radius: 10px;
+}
+#registerForm input:not([type="submit"]) {
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 0 10px;
+  display: block;
+}
+#registerForm input:not([type="submit"]):focus {
+  outline: none;
+  color: white;
+  border: 1px solid rgb(150, 70, 255);
+  box-shadow: 0 0 5px rgb(150, 70, 255);
+}
+.registerFrame .buffer {
+  top: 100%;
+}
+
+/* EDIT */
+#editForm {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.edit {
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 95vh;
+}
+.isi-edit {
+  width: 100%;
+  height: 650px;
+  margin: 0 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.formContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5px;
+}
+.profile {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 10px 0 white;
+}
+.profile h1 {
+  font-size: 24px;
+  margin-top: 5px;
+}
+.formContent input {
+  height: 40px;
+  width: 75%;
+  border-radius: 10px;
+}
+.formContent input[type="text"] {
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 0 10px;
+  display: block;
+  height: 40px;
+  width: 100%;
+}
+.formContent input[type="text"]:focus {
+  outline: none;
+  color: white;
+  border: 1px solid rgb(150, 70, 255);
+  box-shadow: 0 0 5px rgb(150, 70, 255);
+}
+label.editButton input[type="file"] {
+  display: none;
+}
+.editButton {
+  cursor: pointer;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background-color: rgb(150, 70, 255);
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: -40px 0 0 80px;
+}
+.editButton:hover {
+  background-color: rgb(53, 25, 88);
+}
+.insertData {
+  width: 75%;
+}
+.selection {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.selection select {
+  width: 32%;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.selection select:focus {
+  outline: none;
+  border: 1px solid rgb(150, 70, 255);
+  box-shadow: 0 0 5px rgb(150, 70, 255);
+}
+textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  display: block;
+}
+textarea:focus {
+  outline: none;
+  color: white;
+  border: 1px solid rgb(150, 70, 255);
+  box-shadow: 0 0 5px rgb(150, 70, 255);
+}
+input[value="Simpan"] {
+  height: 40px;
+  width: 49%;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgb(150, 70, 255);
+  color: white;
+}
+input[value="Simpan"]:hover {
+  background-color: rgb(53, 25, 88);
+}
+.formButton {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+.formButton a {
+  height: 40px;
+  width: 49%;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-decoration: none;
+  color: red;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.formButton a:hover {
+  background-color: rgb(173, 173, 173);
+}
